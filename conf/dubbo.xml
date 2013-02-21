@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+ 
+    <!-- consumer application name -->
+    <dubbo:application name="alitoolkit"  />
+ 
+    <!-- registry address, used for consumer to discover services -->
+    <dubbo:registry address="dubbo-test.china.alibaba.com:9090" />
+ 
+    <dubbo:reference id="purchaseService" interface="com.alibaba.china.marketing.service.PurchaseService" version="1.0.0"/>
+    <dubbo:reference id="memberReadService" interface="com.alibaba.china.member.service.MemberReadService" version="1.0.0"/>
+</beans>
