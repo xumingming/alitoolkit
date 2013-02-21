@@ -1,7 +1,7 @@
 <html>
   <body>
-    <h2>批量加入购物车</h2>
-    <form action="/purchase/batch-add" method="POST">
+    <h2>加入一个区间的Offer到进货单</h2>
+    <form action="/purchase/range-add" method="POST">
       <table border="1">
         <tr>
           <td>购物车种类</td>
@@ -19,6 +19,33 @@
           <td>offerId</td>
           <td>从: <input type="text" name="from-offer-id" value="1284004751">
            到: <input type="text" name="to-offer-id" value="1284004820"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="提交"></td>
+        </tr>
+      </table>
+    </form>
+
+    <h2>批量加入进货单</h2>
+    <form action="/purchase/batch-add" method="POST">
+      <table border="1">
+        <tr>
+          <td>购物车种类</td>
+          <td>
+            <select name="type">
+              <option value="member">会员</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>memberId</td>
+          <td><input type="text" size="20" name="id" value="xummsell"></td>
+        </tr>
+        <tr>
+          <td>offerIds</td>
+          <td>
+            <textarea name="offer-ids" rows="10" cols="30">1284004751,1284004752</textarea>
+          </td>
         </tr>
         <tr>
           <td colspan="2"><input type="submit" value="提交"></td>
