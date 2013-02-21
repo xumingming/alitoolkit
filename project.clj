@@ -10,6 +10,7 @@
                  [com.alibaba.china.shared/marketing.shared "1.0-SNAPSHOT"]
                  [com.alibaba.china.shared/member.service.api "1.0.0-SNAPSHOT"]]
   :resource-paths ["conf"]
+  :repositories [["alibaba" "http://repo.alibaba-inc.com/nexus/content/groups/alirepositiry/"]]
   :plugins [[lein-ring "0.8.2"]]
   :ring {:handler alitoolkit.handler/app}
   :profiles
